@@ -19,8 +19,8 @@ export async function getMessage (client: InstanceType<typeof GitHub>, context: 
 
   // Don't bother hitting the API if the PR author isn't Dependabot
   if (pr.user.login !== DEPENDABOT_LOGIN) {
-    core.debug(`PR author '${pr.user.login}' is not Dependabot.`);
-    return false;
+    core.debug(`PR author '${pr.user.login}' is not Dependabot.`)
+    return false
   }
 
   core.debug('Verifying the Pull Request contents are from Dependabot')
